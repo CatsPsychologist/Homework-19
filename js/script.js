@@ -1,27 +1,60 @@
-function summo(){
-    let counter = 0;
+// function summo(){
+//     let counter = 0;
+//
+//        return  function count (argument){
+//          counter += argument;
+//          return counter;
+//
+//     }
+//
+//
+// }
+//
+// let sum = summo();
+//
+// console.log(sum(3))
+// console.log(sum(5))
+// console.log(sum(20))
 
-       return  function count (argument){
-         counter += argument;
-         return counter;
 
+function closure(staticNumber = 0, step = 1){
+    let number = staticNumber;
+
+    function counter(){
+        return  number += step;
     }
-
     function reset(){
-          return counter = 0
+        return  number = 0;
     }
 
-    return{count,reset} ;
 
+    return {counter, reset};
 }
 
-let sum = summo();
+let count = closure();
+let count1 = closure(2,3)
+let count2 = closure(4,5)
 
-console.log(sum(3))
-console.log(sum(5))
-console.log(sum(20))
-console.log(sum.reset())
 
-function sum1(counter = 0;)
+
+console.log(count1.counter());
+
+console.log(count1.counter())
+count1.reset();
+console.log(count1.counter())
+
+count2.counter();
+console.log(count2.counter());
+
+
+
+
+
+
+
+
+
+
+
 
 
